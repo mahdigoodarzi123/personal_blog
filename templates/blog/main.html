@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="{% static 'blog/style.css'%}">
+  <style>
+    body {
+      background-image: url("../../media/sky4.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to My Personal Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'blog:main' %}">Home</a></li>
+          <li><a href="{% url 'blog:about' %}">About</a></li>
+          <li><a href="{% url 'contact:contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+    {% for post in posts %}
+    <main>
+      <article>
+        <h2>{{post.title}}</h2>
+        <p>{{post.description}}</p>
+        <p>{{post.post|truncatewords:40}}</p>
+        <p>{{post.created_time}}</p>
+        <button class="read-more"><a href="{% url 'blog:single_post' num=post.id %}">Read More</a></button>
+        <hr>
+      </article>
+    </main>
+    {% endfor %}
+
+    <footer>
+      &copy; 2023 My Personal Blog. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #cacaca;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  background-color: #4e4bff0e;
+  color: #fff;
+}
+
+.profile img {
+  width: 10px;
+  height: 10px;
+  border-radius:10%;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.section {
+  margin-bottom: 50px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.job {
+  margin-bottom: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.school,
+.job {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+}

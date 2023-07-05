@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'blog/abt.css' %}">
+  <title>Resume</title>
+  <style>
+    .social-links img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>John Doe</h1>
+    <p class="job-title">Web Developer</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com" target="_blank"><img src="{% static 'images/linkedin.png'%}" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="{% static 'images/instagram.jpg'%}" alt="Instagram"></a>
+      <a href="https://telegram.org" target="_blank"><img src="{% static 'images/telegram.png'%}" alt="Telegram"></a>
+    </div>
+  </header>
+
+  <section class="summary">
+    <h2>Summary</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida mauris eget risus lacinia, ac faucibus nunc congue.</p>
+  </section>
+
+  <section class="experience">
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Company XYZ</h3>
+      <p class="job-title">Frontend Developer</p>
+      <p class="dates">Jan 2018 - Dec 2020</p>
+      <ul>
+        <li>Developed web applications using HTML, CSS, and JavaScript.</li>
+        <li>Collaborated with the design team to implement user-friendly interfaces.</li>
+        <li>Optimized website performance for fast loading times.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Company ABC</h3>
+      <p class="job-title">UI Designer</p>
+      <p class="dates">Jan 2015 - Dec 2017</p>
+      <ul>
+        <li>Created wireframes and mockups for client projects.</li>
+        <li>Translated design concepts into responsive web interfaces.</li>
+        <li>Worked closely with developers to ensure design integrity.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+    <div class="school">
+      <h3>University of Example</h3>
+      <p class="degree">Bachelor of Science in Computer Science</p>
+      <p class="dates">2011 - 2015</p>
+    </div>
+  </section>
+</body>
+</html>

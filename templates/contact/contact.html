@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'contact/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h2>contact form</h2>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Your name"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Your email"><br>
+
+    <label for="message">Message:</label><br>
+    <textarea rows="4" cols="50" id="message" name="message" placeholder="Your message here"></textarea><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
